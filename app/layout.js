@@ -19,8 +19,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+      <body>
+        <header style={{ padding: "1rem", background: "#222", color: "#fff" }}>
+          <h1>Rick and Morty App</h1>
+          <nav>
+            <a href="/episodes" style={{ marginRight: 10 }}>
+              Episodios
+            </a>
+            <a href="/locations">Localizaciones</a>
+          </nav>
+        </header>
+        <main style={{ padding: "1rem" }}>{children}</main>
       </body>
     </html>
   );
