@@ -7,6 +7,7 @@ import { AppContext } from "@/app/context/appContext";
 
 export default function LocationDetail({}) {
   const [location, setLocation] = useState({});
+  const [residents, setResidents] = useState([]);
   const { setIsLoading } = useContext(AppContext);
   const { id } = useParams();
 
@@ -14,6 +15,7 @@ export default function LocationDetail({}) {
     setLocationDetail({
       id: id,
       setLocationDetail: setLocation,
+      setResidents: setResidents,
       setIsLoading: setIsLoading,
     });
   }, []);
@@ -23,6 +25,7 @@ export default function LocationDetail({}) {
       <div>{location.name}</div>
       <div>Tipo:{location.type}</div>
       <div>Dimensión: {location.dimension}</div>
+      <CharacterScroll characters={residents} />
     </div>
   );
 }
