@@ -1,0 +1,20 @@
+.loadingBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0162d1 0%, #3291ff 50%, #4494f0 100%);
+  background-size: 200% 100%;
+  animation: loadingAnim 1.5s linear infinite;
+  z-index: 9999;
+}
+
+@keyframes loadingAnim {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}

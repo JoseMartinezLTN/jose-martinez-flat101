@@ -1,23 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { setEpisodeDetail } from "./controller";
 import { useParams } from "next/navigation";
+import { AppContext } from "@/app/context/appContext";
 
 export default function EpisodeDetail({}) {
   const [episode, setEpisode] = useState({});
-  const [loading, setLoading] = useState(true); //TODO: add to context and extend to all components
+  const { setIsLoading } = useContext(AppContext);
   const { id } = useParams();
 
   useEffect(() => {
     setEpisodeDetail({
       id: id,
       setEpisodeDetail: setEpisode,
-      setLoading: setLoading,
+      setIsLoading: setIsLoading,
     });
   }, []);
-
-  if (loading) return <div>Cargando...</div>;
 
   return (
     <div>

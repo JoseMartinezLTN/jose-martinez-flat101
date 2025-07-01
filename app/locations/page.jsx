@@ -1,14 +1,18 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import LocationCard from "../components/locationItem/LocationCard";
+import { setLocationList } from "./controller";
+import { AppContext } from "../context/appContext";
 
 export default function LocationsPage() {
   const [locations, setLocations] = useState([]);
+  const { setIsLoading } = useContext(AppContext);
 
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/location")
-      .then((res) => res.json())
-      .then((data) => setLocations(data.results));
+    setLocationList({
+      setLocations: setLocations,
+      setIsLoading: setIsLoading,
+    });
   }, []);
 
   return (

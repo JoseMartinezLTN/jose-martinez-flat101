@@ -1,23 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { setLocationDetail } from "./controller";
+import { AppContext } from "@/app/context/appContext";
 
 export default function LocationDetail({}) {
   const [location, setLocation] = useState({});
-  const [loading, setLoading] = useState(true);
+  const { setIsLoading } = useContext(AppContext);
   const { id } = useParams();
 
   useEffect(() => {
     setLocationDetail({
       id: id,
       setLocationDetail: setLocation,
-      setLoading: setLoading,
+      setIsLoading: setIsLoading,
     });
   }, []);
-
-  if (loading) return <div>Cargando...</div>;
 
   return (
     <div>

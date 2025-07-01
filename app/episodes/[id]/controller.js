@@ -3,11 +3,11 @@ import { getEpisodeDetailCall } from "@/app/api/episodeApi";
 export const setEpisodeDetail = async ({
   id,
   setEpisodeDetail,
-  setLoading,
+  setIsLoading,
 }) => {
-  setLoading(true);
+  setIsLoading(true);
   const episode = await getEpisodeDetailCall({ id });
 
   setEpisodeDetail(episode);
-  setLoading(false);
+  setIsLoading(false);
 };
