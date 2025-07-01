@@ -26,9 +26,9 @@ export default function EpisodeDetail({}) {
   return (
     <div>
       <div className={styles.infoContainer}>
-        <div className={styles.infoPrimary}>Code: {episode.episode}</div>
+        <div className={styles.infoPrimary}>{episode.episode}</div>
         <div className={styles.infoSecondary}>{episode.name}</div>
-        <div className={styles.infoSecondary}>Air Date: {episode.air_date}</div>
+        <div className={styles.infoSecondary}>{episode.air_date}</div>
       </div>
 
       <CharacterScroll characters={characters} />
