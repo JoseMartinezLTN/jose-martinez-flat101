@@ -13,8 +13,6 @@ export default function LocationsPage() {
 
   return (
     <div>
-      <div>Localizaciones</div>
-
       {locations.map((loc) => (
         <LocationCard key={loc.id} location={loc} />
       ))}

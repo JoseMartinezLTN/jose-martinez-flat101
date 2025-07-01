@@ -12,7 +12,6 @@ export default function EpisodesPage() {
 
   return (
     <div>
-      <div>Lista de Episodios</div>
       {episodes.map((ep) => (
         <EpisodeCard key={ep.id} episode={ep} />
       ))}
