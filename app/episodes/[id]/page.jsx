@@ -23,10 +23,14 @@ export default function EpisodeDetail({}) {
 
   return (
     <div>
-      <div>Code: {episode.episode}</div>
-      <div>{episode.name}</div>
-      <div>Air Date: {episode.air_date}</div>
+      <div>
+        <div>Code: {episode.episode}</div>
+        <div>{episode.name}</div>
+        <div>Air Date: {episode.air_date}</div>
+      </div>
+
       <CharacterScroll characters={characters} />
+      <div>//TODO FORM</div>
     </div>
   );
 }
