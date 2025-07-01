@@ -18,3 +18,10 @@
   padding: 5;
   transition: 0.5s;
 }
+
+.navContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

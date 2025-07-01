@@ -4,7 +4,7 @@ import styles from "./CharacterScroll.module.css";
 export default function CharacterScroll({ characters }) {
   return (
     <div>
-      <div>Personajes</div>
+      <div className={styles.scrollTitle}>Personajes</div>
       <div className={styles.characterContainer}>
         {characters.map((char) => (
           <div key={char.id} className={styles.character} title={char.name}>

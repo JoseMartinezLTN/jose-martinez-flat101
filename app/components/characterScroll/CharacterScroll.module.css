@@ -22,3 +22,8 @@
   height: 100%;
   object-fit: cover;
 }
+
+.scrollTitle {
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
