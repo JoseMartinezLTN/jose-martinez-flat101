@@ -5,6 +5,8 @@ import { setEpisodeDetail } from "./controller";
 import { useParams } from "next/navigation";
 import { AppContext } from "@/app/context/appContext";
 import CharacterScroll from "@/app/components/characterScroll/CharacterScroll";
+import CommentForm from "@/app/components/commentForm/CommentForm";
+import styles from "./page.module.css";
 
 export default function EpisodeDetail({}) {
   const [episode, setEpisode] = useState({});
@@ -23,14 +25,14 @@ export default function EpisodeDetail({}) {
 
   return (
     <div>
-      <div>
-        <div>Code: {episode.episode}</div>
-        <div>{episode.name}</div>
-        <div>Air Date: {episode.air_date}</div>
+      <div className={styles.infoContainer}>
+        <div className={styles.infoPrimary}>Code: {episode.episode}</div>
+        <div className={styles.infoSecondary}>{episode.name}</div>
+        <div className={styles.infoSecondary}>Air Date: {episode.air_date}</div>
       </div>
 
       <CharacterScroll characters={characters} />
-      <div>//TODO FORM</div>
+      <CommentForm episodeId={id} />
     </div>
   );
 }

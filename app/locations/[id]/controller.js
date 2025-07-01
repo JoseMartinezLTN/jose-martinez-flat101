@@ -1,3 +1,4 @@
+import { getCharacterListCall } from "@/app/api/characterApi";
 import { getLocationDetailCall } from "@/app/api/locationApi";
 
 export const setLocationDetail = async ({

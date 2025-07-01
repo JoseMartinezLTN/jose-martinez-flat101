@@ -1,0 +1,14 @@
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.infoPrimary {
+  font-weight: bold;
+}
+
+.infoSecundary {
+  font-style: italic;
+}
