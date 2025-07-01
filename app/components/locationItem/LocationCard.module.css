@@ -6,6 +6,10 @@
   border-radius: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
+.card:hover {
+  cursor: pointer;
+  background: #e4e4e4;
+}
 
 .cardMainText {
   color: black;
@@ -17,16 +21,4 @@
 
 .cardText2 {
   color: rgb(48, 48, 48);
-}
-
-.link {
-  margin-top: 0.5rem;
-  display: inline-block;
-  color: #4caf50;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
 }
