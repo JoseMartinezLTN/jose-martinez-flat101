@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Prueba técnica - Flat 101
 
-## Getting Started
+Este proyecto es una aplicación web desarrollada con **Next.js** que consume la API pública de **Rick and Morty** para mostrar episodios, localizaciones y detalles de cada entidad. Ha sido realizada como parte del proceso de selección para **Flat 101**.
 
-First, run the development server:
+## 🔧 Tecnologías usadas
+
+- [Next.js (App Router)](https://nextjs.org/)
+- React (con `use client`)
+- CSS Modules / estilos en línea
+- API de [Rick and Morty](https://rickandmortyapi.com/)
+- HTML5 y JavaScript
+
+## 🚀 Características implementadas
+
+- Listado de **episodios** y **localizaciones**
+- Detalle de cada episodio:
+  - Nombre, fecha, número
+  - Carrusel horizontal con imágenes de los personajes
+  - Formulario de comentarios (nombre, email, texto)
+- Navegación mediante rutas dinámicas (`/episode/[id]`, `/location/[id]`)
+- Uso de `useState`, `useEffect`, `useParams`, y componentes cliente
+- Loader mientras se cargan los datos
+- Estilos responsive
+
+## 📦 Instalación
 
 ```bash
+git clone https://github.com/JoseMartinezLTN/jose-martinez-flat101.git
+cd jose-martinez-flat101
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
