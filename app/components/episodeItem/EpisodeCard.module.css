@@ -1,0 +1,32 @@
+.card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid #0070f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cardMainText {
+  color: black;
+}
+
+.cardText1 {
+  color: rgb(48, 48, 48);
+}
+
+.cardText2 {
+  color: rgb(48, 48, 48);
+}
+
+.link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #0070f3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
